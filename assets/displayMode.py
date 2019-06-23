@@ -1,7 +1,7 @@
 #!/usr/bin/python2.7
 import RPi.GPIO as GPIO
 import subprocess as SP
-screenState = "/home/pi/patricebeutler/assets/currentDisplayMode"
+screenState = "/home/pi/pi-tablet_retropie/assets/currentDisplayMode"
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -15,12 +15,12 @@ try:
     state = a
     stateFile.close()
     if (state == "hdmi"):
-	SP.call('echo "lcd" > /home/pi/patricebeutler/assets/currentDisplayMode', shell=True)
-	SP.call(['sudo','/home/pi/patricebeutler/assets/lcd_out'])
+	SP.call('echo "lcd" > /home/pi/pi-tablet_retropie/assets/currentDisplayMode', shell=True)
+	SP.call(['sudo','/home/pi/pi-tablet_retropie/assets/lcd_out'])
 	print("LCD-MODE")
     elif (state == "lcd"):
-	SP.call('echo "hdmi" > /home/pi/patricebeutler/assets/currentDisplayMode', shell=True)
-	SP.call(['sudo','/home/pi/patricebeutler/assets/hdmi_out'])
+	SP.call('echo "hdmi" > /home/pi/pi-tablet_retropie/assets/currentDisplayMode', shell=True)
+	SP.call(['sudo','/home/pi/pi-tablet_retropie/assets/hdmi_out'])
         print("HDMI-MODE")
 except KeyboardInterrupt:
     GPIO.cleanup()       # clean up GPIO on CTRL+C exit

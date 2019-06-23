@@ -8,7 +8,7 @@
 # Short-Description: Kurze Beschreibung
 # Description: Lange Beschreibung
 ### END INIT INFO
-sudo nohup /home/pi/patricebeutler/assets/screenHandlerDisplayMode.sh &
+sudo nohup /home/pi/pi-tablet_retropie/assets/screenHandlerDisplayMode.sh &
 
 sleep 1
 

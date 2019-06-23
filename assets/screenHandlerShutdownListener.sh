@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo screen -dmS shutdownListener /home/pi/patricebeutler/assets/shutdownListener.py
+sudo screen -dmS shutdownListener /home/pi/pi-tablet_retropie/assets/shutdownListener.py

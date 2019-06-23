@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo screen -dmS displayMode /home/pi/patricebeutler/assets/displayMode.py
+sudo screen -dmS displayMode /home/pi/pi-tablet_retropie/assets/displayMode.py

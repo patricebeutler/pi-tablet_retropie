@@ -8,4 +8,4 @@
 # Short-Description: Kurze Beschreibung
 # Description: Lange Beschreibung
 ### END INIT INFO
-sudo omxplayer --aspect-mode stretch /home/pi/patricebeutler/assets/custom-boot.mp4
+sudo omxplayer --aspect-mode stretch /home/pi/pi-tablet_retropie/assets/custom-boot.mp4

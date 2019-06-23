@@ -14,9 +14,9 @@ from subprocess import check_output
 import subprocess as SP
 import rpi_backlight as bl
 
-screenState = "/home/pi/patricebeutler/assets/currentDisplayMode"
-PNGVIEWPATH = "/home/pi/patricebeutler/assets/pngview/"
-ICONPATH = "/home/pi/patricebeutler/assets/icons"
+screenState = "/home/pi/pi-tablet_retropie/assets/currentDisplayMode"
+PNGVIEWPATH = "/home/pi/pi-tablet_retropie/assets/pngview/"
+ICONPATH = "/home/pi/pi-tablet_retropie/assets/icons"
 brightLast = ""
 layerList = []
 
@@ -67,8 +67,8 @@ def read_and_emulate_mouse(event, touch):
         if brightLast != brightnessPng and brightnessPng != "":
             brightLast = brightnessPng
             if len(layerList) == 0:
-                os.system("/home/pi/patricebeutler/assets/pngview" + "/pngview -b 0 -l 3000" + "1" + " -x 260 -y 150 " + "/home/pi/patricebeutler/assets/icons/brightness/" + "bar" + ".png &")			
-            os.system("/home/pi/patricebeutler/assets/pngview" + "/pngview -b 0 -l 3000" + brightnessPng + " -x 260 -y 150 " + "/home/pi/patricebeutler/assets/icons/brightness/" + brightnessPng + ".png &")
+                os.system("/home/pi/pi-tablet_retropie/assets/pngview" + "/pngview -b 0 -l 3000" + "1" + " -x 260 -y 150 " + "/home/pi/pi-tablet_retropie/assets/icons/brightness/" + "bar" + ".png &")			
+            os.system("/home/pi/pi-tablet_retropie/assets/pngview" + "/pngview -b 0 -l 3000" + brightnessPng + " -x 260 -y 150 " + "/home/pi/pi-tablet_retropie/assets/icons/brightness/" + brightnessPng + ".png &")
             killBrightnessID = check_output("ps aux | grep '[p]ngview' | awk '{print $2}'", shell=True)
             killBrightnessID = killBrightnessID.decode("utf-8")
             killBrightnessID = killBrightnessID.replace("\n", " ")
@@ -92,11 +92,11 @@ def read_and_emulate_mouse(event, touch):
             state = str(state)
             stateFile.close()
             if (state == "lcd"):
-                SP.call('echo "hdmi" > /home/pi/patricebeutler/assets/currentDisplayMode', shell=True)
-                SP.call(['sudo','/home/pi/patricebeutler/assets/hdmi_out'])
+                SP.call('echo "hdmi" > /home/pi/pi-tablet_retropie/assets/currentDisplayMode', shell=True)
+                SP.call(['sudo','/home/pi/pi-tablet_retropie/assets/hdmi_out'])
             else :
-                SP.call('echo "lcd" > /home/pi/patricebeutler/assets/currentDisplayMode', shell=True)
-                SP.call(['sudo','/home/pi/patricebeutler/assets/lcd_out'])
+                SP.call('echo "lcd" > /home/pi/pi-tablet_retropie/assets/currentDisplayMode', shell=True)
+                SP.call(['sudo','/home/pi/pi-tablet_retropie/assets/lcd_out'])
 
 
 if __name__ == "__main__":
