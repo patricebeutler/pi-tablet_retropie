@@ -2,6 +2,6 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(24, GPIO.OUT, inital=GPIO.LOW)
+GPIO.setup(14, GPIO.OUT, inital=GPIO.LOW)
 
-GPIO.output(24, GPIO.HIGH)
+GPIO.output(14, GPIO.HIGH)
