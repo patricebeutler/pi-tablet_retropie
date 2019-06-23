@@ -10,5 +10,5 @@ Required ressources to install retropie on the pi-tablet.
 
 ```
 sudo git clone https://github.com/patricebeutler/pi-tablet_retropie.git
-sudo bash patricebeutler/install.sh
+sudo bash pi-tablet_retropi/install.sh
 ```
