@@ -9,7 +9,7 @@ This repository contains the install-script and all required files to make retro
 * Switch between lcd and hdmi
 * Custom splashscreen (clean bootup-look)
 * Soft-shutdown by pressing power-button
-* Battery-management
+* Battery-management (soft shutdown when battery is too low)
 
 ## Installation
 * Install RetroPie on your SD-card
