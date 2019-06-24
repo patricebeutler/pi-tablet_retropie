@@ -15,7 +15,8 @@ This repository contains the install-script and all required files to make retro
 * Install RetroPie on your SD-card
 * Connect a keyboard to your Pi
 * Start your Pi
-* When prompted by RetroPie to configure the keyboard, press F4 (to get to the console)
+* Set up connectivity (wlan)
+* Use the F4 key on your keyboard to open the console
 * Simply execute the lines below (this will download this repository and do the complete installation).
 
 ```
