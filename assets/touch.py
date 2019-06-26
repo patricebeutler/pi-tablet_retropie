@@ -91,8 +91,8 @@ def read_and_emulate_mouse(event, touch):
     if startX < 244 and startY > 340 and x <= 244:
         call(["amixer", "cset", "numid=1", "--", str(floor(x/2.44)) + '%'])
 		
-		volumeValue = floor(x/2.44);
-		volumePng = "";
+        volumeValue = floor(x/2.44);
+        volumePng = "";
 		
 		
         if volumeValue >= 0 and volumeValue < 10:
