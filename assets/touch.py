@@ -12,7 +12,7 @@ from math import floor
 from subprocess import call
 from subprocess import check_output
 import subprocess as SP
-import rpi_backlight as bl
+from rpi_backlight import Backlight
 
 screenState = "/home/pi/pi-tablet_retropie/assets/currentDisplayMode"
 PNGVIEWPATH = "/home/pi/pi-tablet_retropie/assets/pngview/"
@@ -20,6 +20,7 @@ ICONPATH = "/home/pi/pi-tablet_retropie/assets/icons"
 brightLast = ""
 volumeLast = ""
 layerList = []
+backlight = Backlight()
 
 def read_and_emulate_mouse(event, touch):
     global startX
@@ -44,7 +45,7 @@ def read_and_emulate_mouse(event, touch):
 	
     # top left: brightness
     if startX < 244 and startY < 140 and x <= 244:
-        bl.set_brightness(x + 11)
+        backlight.brightness = (x + 11) / 2.56
         brightnessValue = x + 11
 		
         brightnessPng = ""
